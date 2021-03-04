@@ -1,0 +1,374 @@
+<html>
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="description" content="투데이픽업" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>오늘의픽업</title>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="오늘의픽업" />
+    <meta
+      name="keywords"
+      content="배송, 당일배송, 새벽배송, 오늘의픽업, todaypickup, 빠른배송"
+    />
+    <meta
+      property="og:description"
+      content="오늘의픽업"
+    />
+    <meta
+      property="og:image"
+      content="https://www.baree.net/images/kakaotalk_url.png"
+    />
+    <meta property="og:url" content="https://www.todaypickup.com" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="main.css" />
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src=""></script>
+  </head>
+
+  <body>
+
+     
+
+   
+       <!-- 네비게이션 바 들어갈곳 -->
+       <nav class="navBar">
+        <a class="logo" href="#">
+         <div class="logo-img"><img src="images/ohpickIcon.svg" /></div> 
+         <div class="logo-text">TODAYPICKUP</div> 
+        </a>
+  
+        <ul class="nav-container">  
+          <li><a href="#section1" class="active">서비스 소개</a></li>
+          <li><a href="#section3">서비스 신청</a></li>
+          <li><a href="#section5">문의하기</a></li>
+          <li><a href="#section6">라이더 지원</a></li>
+          <li><a href="">공지사항</a></li>
+        </ul>
+      </nav>
+
+      <!-- 햄버거바     -->
+      <div class="menu-btn">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+
+
+    <div id="main">
+
+      <section id="section1" class="section">
+        <div class="container">
+          <div class="riderWork">
+            <img src="./images/riderWork.svg" />
+          </div>
+          <!-- <div class="main-image"></div> -->
+          <div class="stores">
+            <div class="shopping">쇼핑몰이라면 다~하는</div>
+            <div class="image-container">
+              <img src="images/premium.svg" />
+            </div>
+            <div class="today">당일배송</div>
+            <div class="dawn">새벽배송</div>
+          </div>
+        </div>
+        <!-- 팝업창 부분 -->
+        <div class="popup">
+          <div class="ohpick-image">
+            <img src="/images/popupLogo .svg" />
+            <img src="/images/xMark.svg" id="xMark"/>
+          </div>        
+          <div class="newsLetter-wrapper">
+            <!-- <div class="news">뉴스레터 구독하시고</div>
+            <div class="advantage">혜택 받으세요!</div> -->
+            <img src="/images/newsLetter.svg"/>
+          </div>
+          <div class="consumer">
+            <!-- <div>소비자 소비 트렌드 매월 무료 제공</div>
+            <div>당일배송 배송비 60% 할인</div> -->
+            <img src="/images/consumer.svg"/>
+          </div>
+          <div class="today-wrapper">
+            <div class="newsletter">오늘의픽업 뉴스레터를 구독하고, </div>
+            <div>프리미엄 당일배송을 시작해보세요!</div>
+            <div class="today">당일배송은 선택이 아닌 필수입니다.</div>
+            <div class="line">
+              <img src="/images/popupLine.svg"/>
+            </div>
+          </div>
+          
+          <div class="information">정보입력</div>
+          <div class="form-container">
+            <div class="form" >
+              <div class="inputBox">
+                  <label for="mail">*이메일</label>
+                  <input type="email" id="email" />
+              </div>
+              <div class="inputBox">
+                <label for="name">*상호명</label>
+                <input type="text" id="companyName" />
+              </div>
+              <div class="ceoName-wrapper inputBox">
+                <label for="name">대표명</label>
+                <input type="text" id="ceoName" />
+              </div>
+              <div class="phoneNumber-wrapper inputBox">
+                <label for="name">*전화번호</label>
+                <input type="text" id="phoneNumber" />
+              </div>
+              <div class="url-wrapper inputBox">
+                <label for="name">사이트 URL</label>
+                <input type="text" id="url" />
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" checked id="consent"/>
+                <label for="">매월 오늘의픽업의 팍격 할인 혜택 정보와</label>
+                <br />
+                <label for="">대표님만을 위한 맞춤형 이커머스</label>
+                <br />
+                <label for="">트렌드 정보를 받고 싶다면? 마케팅 정보수신 동의하기</label>
+              </div>
+              <div class="button" id="subscribeButton">
+                <button type="submit">구독하기</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </section>
+            
+      <div class="kakao-container">
+        <a href="https://pf.kakao.com/_XVTzK/chat">
+          <img src="images/kakao1.svg" class="kakao1"/>
+        </a>
+        <a href="https://pf.kakao.com/_XVTzK/chat">
+          <img src="images/kakao2.svg" class="kakao2"/>
+        </a>
+      </div>
+
+      <section id="section2" class="section">
+        <div class="container">
+          <div class="intro">
+            <div class="shoppingMall">
+              모~든 쇼핑몰, 초기 투자 비용없이 서비스 이용!
+            </div>
+            <div class="threePm">오후 3시까지 <span class="light">주문한 상품,</span> 당일배송</div>
+            <div class="sevenPm">오후 7시까지 <span class="light">주문한 상품</span>, 새벽배송</div>
+          </div>
+          <div class="intro2">
+            <div class="shoppingMall">모~든 쇼핑몰,</div>
+            <div class="begining">초기 투자 비용없이 서비스 이용!</div>
+            <div class="threePm">오후 3시까지 <span class="light">주문건</span></div> 
+            <div class="today">당일배송</div>
+            <div class="sevenPm">오후 7시까지<span class="light">주문건</span></div> 
+            <div class="dawn">새벽배송</div>
+          </div>
+          <div class="image-container">
+            <img
+            class="main-image"
+            src="./images/rider.svg"
+            alt="라이더"
+          />
+          </div>
+        </div>
+      </section>
+
+      <section id="section3" class="section">
+        <div class="container">
+          <div class="intro">
+            <div class="seoul">서울전지역, 경기도</h2>
+            <div class="today">당일배송 & 새벽배송</div>
+            <div class="start">시작해보세요</div>
+          </div>
+          <div class="image-container">
+            <div class="download-container">
+              <img src="./images/downloadService.svg" />
+            </div>
+            <div class="join-container">
+              <img src="./images/joinService.svg" />
+            </div class="image-container">  
+          </div>
+          
+          <!-- 지도이미지 넣어야 함 -->
+          <!-- <img
+            class="main-image"
+            src=""
+            alt=""
+          /> -->
+        </div>
+      </section>
+
+      <!-- 섹션4는 사진으로 도배하는 곳 -->
+      <section id="section4" class="section">
+        <div class="container">
+         
+          <div class="client cf">
+            <img src="./images/majorClients.png" alt="" />
+          </div>
+          <div class="clientImages">
+         
+            <img src="./images/client1.svg" alt="" />
+            <img src="./images/client2.svg" alt="" />
+            <img src="./images/client3.svg" alt="" />
+            <img src="./images/client4.svg" alt="" />
+            <img src="./images/client5.svg" alt="" />
+            <img src="./images/client6.svg" alt="" />
+            <img src="./images/client7.svg" alt="" />
+            
+          </div>
+          <div class="family cf">
+            <div class="family1">
+              <img src="./images/family.png" alt="" />
+            </div>
+          </div>
+          <div class="family2">
+            <img src="./images/family2.svg" alt="" />
+          </div>
+          
+        </div>
+      </section>
+      
+      <section id="section5" class="section">
+        <div class="container">
+          <div class="intro">
+            <div class="today">당일배송, 새벽배송</div>
+            <div class="choice">선택이 아닌 필수</div>
+            <div class="all">모~든 쇼핑몰 초기 투자 비용없이 서비스 이용!</div>
+          </div>
+          <div class="intro2">
+            <div class="pm3">PM 3:00까지 당일배송</div>
+            <div class="pm7">PM 7:00까지 당일배송</div>
+          </div>
+          <div class="phoneNumber">
+            <img src="./images/phoneNumber.svg" alt="" />
+          </div>
+          <div class="city-container">
+            <img src="./images/city.svg" />
+          </div>
+          <div class="rider-container">
+            <img src="./images/rider2.svg" />
+          </div>
+        </div>
+      </section>
+
+      <section id="section6" class="section">
+        <div class="container">
+          <div class="intro">
+            <div class="flex">FLEX 라이더는</div>
+            <div class="today">오늘의픽업의 "Bro"입니다.</div>
+            <div class="now">지금 바로 지원해보세요!</div>
+          </div>
+          <!-- <div class="now-container">
+          </div> -->
+          <div class="image-container">
+            <!-- <img class="pcImage" src="./images/Frame.svg" /> -->
+            <img class="ipadImage" src="./images/ipadFrame.svg" alt="" />
+
+            <div class="pcDownload-image-container">
+              <div class="download-container">
+                <img src="images/pcAndroid.svg" class="android"/>
+                <img src="images/pcIphone.svg" class="iphone"/>
+                <img src="images/pcAppGuide.svg" class="iphone"/>                
+              </div>
+
+              <img class="pcFrameImage" src="images/pcFrame.svg" />
+            </div>
+
+            <div class="download-image-container">
+              <img src="images/android.svg" alt="" />
+              <img src="images/iphone.svg" alt="" />
+              <img src="images/appGuide.svg" alt=""/>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <footer id="footer">
+      <div class="info-container">
+        <div class="info">information</div>
+        <div>상호명: 주식회사 오늘의픽업</div>
+        <div>대표자: 진승민, 오경담</div>
+        <div>주소 : 대한민국 서울시 용산구 만리재로 40길 15</div>
+        <div>사업자번호 : 322-87-01759</div>
+        <div>대표전화 파트너스 문의 : 1666.5615</div>
+        <div>대표전화 라이더 문의: 1666.5428</div>
+        <div>메일 : todaypickup@todaypickup.com</div>
+      </div>
+      <div class="copy-container">
+        <div>Copyright © 2020 Todaypickup Inc.</div>
+        <div>All rights reserved.</div>
+      </div>
+    </footer>
+  
+  </body>
+
+
+  <script>
+    // 팝업 부분 
+    const xMark = document.getElementById('xMark')
+    xMark.addEventListener('click', function(e){
+      // document.querySelector('.popup').style.visibility="hidden";
+      document.querySelector('.popup').style.display = "none";
+      
+    })
+
+    
+
+    const button = document.getElementById('subscribeButton')
+    button.addEventListener('click', function(res){
+      const email = document.getElementById('email').value
+      const companyName = document.getElementById('companyName').value
+      const ceoName = document.getElementById('ceoName').value
+      const phoneNumber = document.getElementById('phoneNumber').value
+      const url = document.getElementById('url').value
+      const marketingAgree = document.getElementById('consent').value
+
+      console.log('email:', email)
+
+      const data = {
+        email,
+        companyName,
+        ceoName,
+        phoneNumber,
+        url,
+        marketingAgree
+      }
+      console.log('data:', data)
+
+      axios.post('https://ohpick.co.kr/mall/join/save', data).then(function(res) {
+        if(res.data.success) {
+            // admin.alertMsg("회원가입 되었습니다.");
+            alert("회원가입 되었습니다.")
+            location.href = '/';
+            
+        } else {
+            // admin.alertMsg(res.data.msg);
+            alert(res.data.msg)
+        }
+      })
+    })
+    
+        
+    // --------모바일메뉴-----
+    $(document).ready(function(){
+      $('.menu-btn').click(function(){
+        $('.menu-btn').toggleClass('active')
+        $('.navBar').toggleClass('nav-active')
+      })
+  
+      $('.nav-active, li').click(function(){
+        $('.menu-btn').removeClass('active')
+        $('.navBar').removeClass('nav-active')
+      })
+    })
+  </script>
+  
+
+</html>
+
